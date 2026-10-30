@@ -1,7 +1,7 @@
-#ISAC: Individual Sustainable Autonomous Cooker
+# ISAC: Individual Sustainable Autonomous Cooker
 
 An AI-driven, IoT-enabled micro-portioning cooking system designed to minimize household food waste by automating exact portion sizes and bridging the gap between human culinary intent and robotic precision.
-  ##System Architecture & Data Flow
+  ## System Architecture & Data Flow
 
 ISAC uses a distributed, edge-computed architecture. Instead of running heavy logic on the microcontroller, commands flow from user input to hardware actuation:
 
@@ -13,28 +13,28 @@ ISAC uses a distributed, edge-computed architecture. Instead of running heavy lo
 
     ESP32 Microcontroller: The ESP32 subscribes to the MQTT topic, executes the PID thermal control loop, and coordinates the mechanical dispensing and heating elements.
 
-  ##Repository Structure
+  ## Repository Structure
 
-    ###cad/
+  ### cad/
 
         Contains the 3D computer-aided design (CAD) files for the modular dispenser and cooking chamber. 
 
-    ###esp_src/
+  ### esp_src/
 
         Contains the production firmware written for the ESP32 microcontroller. This handles MQTT message parsing, hardware actuation, and the PID thermal control loop.
 
-    ###server/
+  ### server/
 
         Houses the backend infrastructure and webserver files hosted on the local NAS. The core orchestration script (console.js) manages the local Ollama API integration, translates natural language into structured cooking parameters, and publishes commands to the MQTT broker. (Note: Credentials and sensitive environment variables are excluded for security)
 
-    ###img/
+  ### img/
 
         Visual documentation and photos of physical prototypes.
 
-    ###src/ (Legacy)
+  ### src/ (Legacy)
 
         Archived, early-stage source code written for a standard Arduino before migrating to the ESP32 IoT architecture.
 
-    ###skem/ (Legacy)
+  ### skem/ (Legacy)
 
         Archived KiCad schematic files from earlier electronics design iterations.
